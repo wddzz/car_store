@@ -1,0 +1,72 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>搜索结果</title>
+    <title>car-store首页</title>
+    <link rel="stylesheet" href="{%static 'css/common.css'%}">
+    <link rel="stylesheet" href="{%static 'css/index.css'%}">
+</head>
+<body>
+    <div id="container">
+        
+        <!--顶部长条－－图标，电话，搜索框，登录注册链接-->
+        <div id="top">
+            <table width="100%" height="100%">
+
+                <tr>
+                    <td rowspan="2">
+                        <img height="144px" src="{%static 'images/logo1.png'%}">
+                    </td>
+                    <td id="get_touch">GIVE US A CALL: 027 XXXX XXXX</td>
+                    <td id="log_sign_link">
+                        {%if user.uname%}
+                            <span id="login_success">欢迎你，{{user.uname}} </span>
+                            <a href="/car/login/?quit=yes" id="quit_a"> &nbsp;&nbsp;&nbsp;&nbsp;注销</a>
+                        {%else%}
+                            <a id="login_a" href="/car/login/">LOGIN</a>
+                            |
+                            <a id="register_a" href="/car/sign/">REGISTER</a>
+                        {%endif%}
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <input id="search" type="text" name="search" placeholder="车型　品牌　...">
+                        <input id="search_submit" type="button" value="搜索">
+                    </td>
+                    <td>
+                        <a href="/car/cart/" id="mycart">我的购物车</a>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+        
+        <div id="main">
+            <!--小图第一类　small cars-->
+            <div class ="maincars"> 
+                <div class="smallimages"> 
+                    <ul>
+                        {%for car in cars%}
+                        <li>
+                            <p>
+                                <a href="/car/car_info/?car_id={{car.id}}">
+
+                                    <img src="/{{car.carimage}}">
+                                </a>
+                            </p>
+                            <div class="nameprice">
+                                <p>{{car.carname}}</p>
+                                ￥{{car.carprice}}
+                            </div>
+                        </li>
+                        {%endfor%}
+                    </ul>
+                    
+                </div>
+            </div>
+    </div>   
+</body>
+</html>

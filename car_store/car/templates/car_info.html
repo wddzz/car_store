@@ -1,0 +1,159 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>car_info详情页面</title>
+    <script src="{%static 'js/gao/jquery-3.2.1.js'%}"></script>
+    <script src="{%static 'js/car_info_ajax.js'%}"></script>
+    <link rel="stylesheet" href="{%static 'css/common.css'%}">
+    <link rel="stylesheet" href="{%static 'css/car_info.css'%}">
+    
+</head>
+<body>
+    <div id="container">
+        <!--顶部长条－－图标，电话，搜索框，登录注册链接-->
+        <div id="top">
+            <table width="100%" height="100%">
+                <tr>
+                    <td>
+                        <img height="144px" src="{%static 'images/logo1.png'%}">
+                    </td>
+                    <td id="get_touch">GIVE US A CALL: 027 8888 8888</td>
+                    <td id="log_sign_link">
+                        {%if user.uname%}
+                            <span id="login_success">欢迎你，{{user.uname}} </span>
+                            <a id="gotoindex" href="/car/index/">&nbsp;&nbsp;&nbsp;&nbsp;首页</a>
+                            <br>
+                            <a href="/car/cart/" id="mycart">我的购物车</a>
+                            <a href="/car/login/?quit=yes" id="quit_a"> &nbsp;&nbsp;&nbsp;&nbsp;注销</a>
+                        {%else%}
+                            <a id="login_a" href="/car/login/">LOGIN</a>
+                            |
+                            <a id="register_a" href="/car/sign/">REGISTER</a>
+                        {%endif%}
+                    </td>
+                </tr>
+                
+            </table>
+        </div>
+
+        <!--商品详情主体部分-->
+        <div id="main">
+            
+            <!--左边部分　图片-->
+            <div class="left">
+                <img src="/{{car.carimage}}">
+            </div>
+                
+
+            <!--右边部分　描述　价格　颜色选择　数量　加入购物车　立即购买-->
+            <div class="right">
+                <p class="carname" id="carname">{{car.carname}}</p>
+                <p class="cardesc">富有表现力设计的越野车
+                    GLA SUV配备经过改进的散热器格栅和前保险杆，勾勒出霸气凌厉的外观，越野性能更加出众。内饰也同样如此，别具一格的内饰也更彰显出SUV风范。车辆大量使用银色镀铬控制按钮和夺人眼球的全新饰件，将优质质感展露无遗
+                </p>
+                <table class="table1">
+                    <tr>
+                        <td class="col1">惊喜价</td>
+                        <td><h3 class="carprice" id="carprice">￥{{car.carprice}}</h3></td>
+                    </tr>
+
+                    <tr>
+                        <td class="col1">促&nbsp;&nbsp;&nbsp;&nbsp;销</td>
+                        <td class="col2"><a class="ad" href="#">SUPER会员享2%返利，此商品预计返39980云钻（价值399.8元）</a></td>
+                    </tr>                
+                
+                    <tr>
+                        <td class="col1">颜&nbsp;&nbsp;&nbsp;&nbsp;色</td>
+                        <td class="col2">
+                            <span>黑色</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="col1">数&nbsp;&nbsp;&nbsp;&nbsp;量</td>
+                        <td class="col2">
+                                <input type="number" name="count" min="1" id="carcount" placeholder="1">
+                                <input type="hidden" id="car_id" value="{{car.id}}">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td height="80px" class="col2">
+                                <span id="addToCart">加入购物车</span>
+                               <span id="buynow">立即购买</span>                                                  
+                        </td>
+                    </tr>
+
+                </table>                              
+            </div>           
+        </div>
+
+        
+
+        <!--商品详情部分-->
+        <div>
+            <h1>商品详情</h1>
+            <hr>
+        </div>
+        <div id="canshu">
+            <img src="{%static 'images/canshu.jpg'%}">
+        </div>
+
+
+
+        <!--商品评价部分-->
+        <div id="comment">
+            <div>
+                <h1>商品评价</h1>
+                <hr>
+            </div>
+            <div class="commenttable">
+                <table>
+                    <tr>
+                        <td>用户</td>
+                        <td>评价</td>
+                        <td>评价日期</td>
+                    </tr>
+                    {%for comment in comments%}
+                    <tr>
+                        <td>{{comment.uname}}</td>
+                        <td>{{comment.comment}}</td>
+                        <td>{{comment.createdat}}</td>
+                    </tr>
+                    {%endfor%}
+                </table>
+            </div>
+        </div>
+
+
+        <!--页面底部-->
+            <div id="bottommenu">
+                <div class="bottomlogo">
+                    <img src="{%static 'images/bottomlogo.png'%}">
+                </div>
+                <hr>
+                <ul class="bottomlinks">
+                    <li><a href="#/">ABOUT US</a></li>
+                    <li><a href="#/">CATEGORIES</a></li>
+                    <li><a href="#/">PREORDERS</a></li>
+                    <li><a href="#/">CONTACT US</a></li>
+                    <li><a href="#/">RECEIVE OUR NEWSLETTER</a></li>
+                </ul>
+                <p>"Lorem ipsum dolor sit amet, consectetur,  sed do eiusmod tempor incididunt <br>
+                    eiusmod tempor incididunt </p>
+                <br>
+                <div class="footer">
+                    <div class="copyright">
+                      Copyright &copy; 2017.Company name All rights reserved.
+                    </div>
+                    <div class="design">
+                         Designed by <a href="#">https://github.com/xuyaling</a>
+                    </div>
+                </div>
+            </div>
+
+    </div>  
+</body>
+</html>

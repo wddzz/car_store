@@ -1,0 +1,190 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+
+    <script type="text/javascript" src="{%static 'js/cheng/jquery1.42.min.js'%}"></script>
+<script language="javascript" type="text/javascript" src="{%static 'js/cheng/jquery.validate.js'%}"></script>
+<script language="javascript" type="text/javascript" src="{%static 'js/cheng/validate_expand.js'%}"></script>
+<script language="javascript" type="text/javascript" src="{%static 'js/cheng/validate.js'%}"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    initValidator();
+});
+</script>
+<link href="{%static 'css/cheng/regist.css'%}" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+
+
+
+
+
+    
+<div class="content">
+  <div class="demo">
+  <div class="title"> <img src="{%static 'images/cheng/index_03.jpg'%}"
+  width="150" /><p>账号注册</p>
+  <div class="c"></div>
+  </div>
+     <ul>
+        {%for e in errors%}
+        <li>{{e}}</li>
+        {%endfor%}
+    </ul>
+    <form action="{%url 'sign'%}" method="post">
+     {% csrf_token %}
+    <table width="50%">
+        <tr>
+            <td class="tdcon"><span style="color:#F00;">*</span>用户名：</td>
+            <td>
+                <input class="stext" type='text' name="uname" id="userName" value="" />
+                <div class="tipinfo"></div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="tdcon"><span style="color:#F00;">*</span>密码：</td>
+            <td>
+                <input class="stext" type="password" name="upass" id="passWord" value="" />
+                <div class="tipinfo"></div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="tdcon"><span style="color:#F00;">*</span>确认密码：</td>
+            <td>
+                <input class="stext" type='password' name="passWordAgain" id="passWordAgain" value="" />
+                <div class="tipinfo"></div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="tdcon"><span style="color:#F00;"></span>邮箱：</td>
+            <td>
+                <input class="stext" type='text' name="email" id="email" value="" />
+                <div class="tipinfo"></div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="tdcon"><span style="color:#F00;">*</span>手机号码：</td>
+            <td>
+                <input class="stext" type='text' name="uphone" id="sms" value="" />
+                <div class="tipinfo"></div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="tdcon"><span style="color:#F00;"></span>居住地：</td>
+            <td>
+                <select name="" style=" width:150px; border-color:#ddd;">
+                  <option>北京</option>
+                  <option>武汉</option>
+                  <option>广州</option>
+                  <option>天津</option>
+                  <option>上海</option>
+                  <option>南京</option>
+                  <option>吉林</option>
+                </select>
+                <div class="tipinfo"></div>
+            </td>
+
+        </tr>
+
+
+        <tr>
+            <td class="tdcon"><span style="color:#F00;"></span>QQ：</td>
+            <td>
+                <input class="stext" type='text' value="" />
+                <div class="tipinfo"></div>
+            </td>
+        </tr>
+        
+        <tr >
+            <td class="tdcon"><span style="color:#F00;"></span>用户性别：</td>
+            <td>
+                <p >
+                  <label style="padding-right:30px;">
+                    <input type="radio" name="RadioGroup1" value="小王子" id="RadioGroup1_0" />
+                    男</label>
+                  <label style="padding-right:30px;">
+                    <input type="radio" name="RadioGroup1" value="小公主" id="RadioGroup1_1" />
+                    女</label>
+                  <br />
+              </p>
+<div class="tipinfo"></div>
+          </td>
+        </tr>
+        
+
+        <tr>
+            <td class="tdcon"><span style="color:#F00;"></span>用户姓名：</td>
+            <td>
+                <input class="stext" type='text' value="" />
+                <div class="tipinfo"></div>
+            </td>
+        </tr>
+        
+
+        <tr >
+            <td class="tdcon" colspan="2">
+             <p class="clearfix agreement">
+            <input type="checkbox" />
+            <b class="left" style="font-weight:normal;">我已经阅读并接受<a style=" color:#2ba0bb;">《Car-Store用户协议》</a></b>
+        </p>
+            </td>
+            
+        </tr>
+        
+        
+        <tr>
+            
+            <td style="width:50px;"></td>
+            <td id="submit"><input type="submit" value="立即注册" class="Button br" >
+            </td>
+            
+        </tr>
+    </table>
+    </form>
+    
+    <div class="erweima">
+    <p>已有Car-Store账号？ 立即登录</p>
+    <img src="{%static 'images/cheng/demo_07.jpg'%}" width="170" height="170"/>
+    <p>「最新资讯 请关注我们的微信号」</p>
+    </div>
+</div>
+
+</div>
+
+    <!-- -------------------------------------- -->
+   <!--  <ul>
+        {%for e in errors%}
+        <li>{{e}}</li>
+        {%endfor%}
+    </ul>
+    <form action="{%url 'sign'%}" method="post">
+        {%csrf_token%}
+        <p>
+            用户名称：
+            <input type="text" name="uname">
+        </p>
+        <p>
+            用户密码：
+            <input type="password" name="upass">
+        </p>
+        <p>
+            用户电话：
+            <input type="text" name="uphone">
+        </p>
+        <p>
+            <input type="submit" value="提交">
+        </p>
+    </form> -->
+</body>
+</html>

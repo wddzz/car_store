@@ -1,0 +1,111 @@
+#container>h1.top{
+    /*取消加粗，文本颜色，下边框，下内边距，上外边距，下外边距*/
+    font-weight:normal;
+    color:#999;
+    border-bottom:1px solid #ccc;
+    padding-bottom:20px;
+    margin:35px 0 15px 0;
+}
+#login-box>p{
+    position:relative;
+}
+/*会员注册>*/
+#login-box>p>a{
+    /*宽度，高度，边框，定位(绝对定位)，位置，
+    文字大小，水平居中，行高，文字颜色，取消下划线*/
+    width:150px;
+    height:48px;
+    border:1px solid #64A131;
+    position:absolute;
+    left:174px;
+    bottom:20px;
+    font-size:18px;
+    text-align:center;
+    line-height:48px;
+    color:#64A131;
+    text-decoration:none;
+    border-radius:3px;
+
+}
+#login-form .form-line .border{
+    /*宽度，高度，边框，取消内边距*/
+    width:285px;
+    height:40px;
+    border:1px solid #ccc;
+    padding:0;
+    /*左内边距*/
+    padding-left:15px;
+    /*取消轮廓*/
+    outline:0;
+}
+#login-form .form-line .border:focus{
+    border-color:#64A131;
+    /*边框阴影*/
+    box-shadow:0 0 2px #64a131;
+}
+#login-form .form-line p{
+    color:#999;
+    font-size:16px;
+    /*高度，行高*/
+    height:42px;
+    line-height:42px;
+    /*左浮动*/
+    float:left;
+    /*右外边距*/
+    margin-right:20px;
+    /*宽度，文本右对齐*/
+    width:64px;
+    text-align:right;
+}
+#login-form .form-line div{
+    float:left;
+}
+#login-form .form-line{
+    overflow:hidden;
+    padding:15px 0;
+}
+#login-form{
+    margin-top:50px;
+    margin-right:55px;
+}
+#login-form .form-line span{
+    display:block;
+    margin-top:10px;
+    font-size:14px;
+    color:#f00;
+}
+}
+#login-form .form-line .pwd-line{
+    font-size:16px;
+    color:#999;
+}
+#login-form .form-line .pwd-line input{
+    width:18px;
+    height:18px;
+    vertical-align:middle;
+}
+#login-form .form-line .pwd-line a{
+    color:#999;
+    text-decoration:none;
+    font-weight:bold;
+}
+#login-form .form-line .form-btn input{
+    width:140px;
+    height:40px;
+    border-radius:5px;
+    background-color:#64A131;
+    color:#fff;
+    font-size:18px;
+    border:none;
+}
+
+#login-form .form-line .form-btn button{
+    width:140px;
+    height:40px;
+    border-radius:5px;
+    background-color:#64A131;
+    color:#fff;
+    font-size:18px;
+    border:none;
+   
+}

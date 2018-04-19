@@ -1,0 +1,186 @@
+#top{
+    width: 1200px;
+    height: 150px;
+    background: gray;   
+    font-size: 18px;
+    margin-bottom: 30px;
+    margin-left: 150px;
+
+}
+
+#get_touch{
+    color:#fff;
+    font-weight: bold;
+}
+
+#log_sign_link{
+    color:white;
+}
+
+#login_a, #register_a, #login_success, #quit_a, #mycart{
+    color: white;
+    text-decoration: none;
+}
+
+#gotoindex{
+    color: white;
+    text-decoration: none;
+}
+
+
+#container{
+    position: absolute;
+    top:200px;
+    left: 250px;
+}
+
+#order_head{
+    overflow: hidden;
+}
+.head{
+    background: #F5F5F5;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+#treasure{
+    width: 40%;
+}
+#price{
+    width: 10%;
+}
+#order_count{
+    width:5%;
+}
+#handle{
+    width: 20%;
+}
+#payed_money{
+    width: 10%;
+}
+#deal_status{
+    width: 15%;
+    position: relative;
+}
+#corner{
+    width:0;
+    height:0;
+    border:5px solid transparent;
+    border-top-color:green;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+#checkall1{
+    margin-top:5px;
+    margin-left:10px;
+}
+#checkall1 input{
+    vertical-align:middle;
+}
+#button{
+    height: 30px;
+    margin:0px;
+    padding: 0px;
+    margin-left: 10px;
+}
+
+
+#container .date{
+    overflow: hidden;
+    background-color: #EAF8FF; 
+    height: 40px;
+    line-height: 40px;
+}
+#container .date .order_number{
+    margin-left: 10px;
+}
+#container .date .order_number input{
+    vertical-align:middle;
+}
+#container .date .store{
+    margin-left: 153px;
+}
+#container .date .store a{
+    color: #B30404;
+    font-family: "楷体";
+}
+#container .date .touch_me{
+    margin-left: 86px;
+}
+#container .date .touch_me a{
+    color: #B30404;
+    font-family: "楷体";
+}
+
+#container .goods_message{
+    overflow: hidden;
+    height: 150px;
+    background-color: #fff;
+    text-align: center;
+    position:relative;
+}
+#container .goods_message .goods_description{
+    overflow: hidden;
+    vertical-align: center;
+    position: absolute;
+    top: 32%;
+    left: 0px;
+
+}
+#container .goods_message .goods_description span{
+    margin-right: 6px; 
+    top: 32%;
+    left: 0px;
+}
+#container .goods_message .goods_price{
+    position: absolute;
+    top: 32%;
+    left: 424px;
+}
+#container .goods_message .goods_count{
+    position: absolute;
+    top: 32%;
+    left: 520px;
+}
+#container .goods_message .goods_handle{
+    position: absolute;
+    top: 32%;
+    left: 610px;
+}
+
+#container .goods_message .goods_handle span:hover{
+    text-decoration: underline;
+}
+
+#container .goods_message .payed_money{
+    position: absolute;
+    top: 32%;
+    left: 764px;
+}
+#container .goods_message .deal_status{
+    position: absolute;
+    top: 32%;
+    left: 890px;
+}
+
+#container .insurance{
+    height: 20px;
+    position: relative;
+}
+#container .insurance .insurance2{
+    position: absolute;
+    top: -3px;
+    left: 50px;
+}
+#container .insurance .total_money{
+    position: absolute;
+    top: -3px;
+    left: 374px;
+}
+#container .insurance .insurance_count{
+    position: absolute;
+    top: -3px;
+    left: 492px;
+}
+

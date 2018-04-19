@@ -1,0 +1,35 @@
+#main div.item{
+    border-top:1px solid #ccc;
+    margin-top:20px;
+}
+
+#main div.item>p{
+    margin:10px 0;
+}
+#main div.item>p>a{
+    color:#666;
+    font-size:14px;
+    text-decoration:none;
+    line-height:42px;
+}
+
+#main div.item ul{
+    overflow:hidden;
+}
+
+#main div.item li{
+    /*宽度，左浮动，右外边距，下外边距*/
+    width:190px;
+    float:left;
+    margin-right:10px;
+    margin-bottom:10px;
+}
+#main div.item li.no-margin{
+    margin-right:0;
+}
+#main div.item li>p img{
+    width:100%;
+}
+#main div.item li>p{
+    margin-bottom:10px;
+}

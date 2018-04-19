@@ -1,0 +1,40 @@
+/*1.实现页面的css重写以及通用样式的定义*/
+body{
+    margin:0;
+    padding:0;
+    font:16px 'microsoft yahei';
+}
+
+p,ul,ol,h1,h2,h3,h4,h5,h6,span,div{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+img{
+    /*取值为top/middle/bottom 均可*/
+    vertical-align:middle;
+    width: 170px;
+}
+
+.lf{float:left;}
+.rt{float:right;}
+.clear{clear:both;}
+
+#container{
+    width:1000px;
+    margin:0 auto;
+}
+a:link{
+    text-decoration: none;
+    color: black;
+}
+a:hover{ 
+    color:#f00;
+    text-decoration: underline;
+}
+/*a:visited{
+}*/
+a:active{
+    color: #FCF40E;
+}

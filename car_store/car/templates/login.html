@@ -1,0 +1,203 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <link rel="stylesheet" href="{%static 'css/cheng/common.css'%}">
+    <link rel="stylesheet" href="{%static 'css/cheng/login.css'%}">
+    <link rel="stylesheet" href="{%static 'css/index.css'%}">
+
+    <script src="{%static 'js/cheng/jquery-1.11.3.js'%}"></script>
+    <script src="{%static 'js/cheng/login.js' %}"></script>
+
+    <link rel="stylesheet" type="text/css" href="{%static 'css/cheng/reset.css'%}"/>
+<script type="text/javascript" src="{%static 'js/cheng/jquery-1.8.3.min.js'%}"></script>
+<script type="text/javascript" src="{%static 'js/cheng/FlexSlider/jquery.flexslider.js'%}"></script>
+<link rel="stylesheet" type="text/css" href="{%static 'js/cheng/FlexSlider/flexslider.css'%}">
+<link rel="stylesheet" type="text/css" href="{%static 'css/cheng/thems.css'%}">
+<script type="text/javascript" src="{%static 'js/cheng/js_z.js'%}"></script>
+
+<link rel="stylesheet" type="text/css" href="{%static 'css/cheng/thems.css'%}">
+
+<script language="javascript">
+$(function() {
+  $('.flexslider').flexslider({
+    animation: "slide"
+  });
+});
+</script>
+
+</head>
+<body>
+
+<!--顶部长条－－图标，电话，搜索框，登录注册链接-->
+        <!--顶部长条－－图标，电话，搜索框，登录注册链接-->
+    <div id="top">
+        <table width="100%" height="100%">
+
+            <tr>
+                <td rowspan="2">
+                    <img height="144px" src="{%static 'images/logo1.png'%}">
+                </td>
+                <td id="get_touch">GIVE US A CALL: 027 XXXX XXXX</td>
+                <td id="log_sign_link">
+                    <a id="login_a" href="/car/login/">LOGIN</a>
+                    |
+                    <a id="register_a" href="/car/sign/">REGISTER</a>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                <form>
+                    <input id="search" type="text" name="search" placeholder="车型　品牌　...">
+                    <input id="search_submit" type="submit" value="搜索">
+                </form>
+                </td>
+                <td>
+                    <a id="gotoindex" href="/car/index/">&nbsp;&nbsp;&nbsp;&nbsp;首页</a>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+        
+<div class="space_hx">&nbsp;</div>
+<!--主体盒子-->
+
+
+
+
+   <!-- 右：登录表单-->
+<div style="background-image:url({%static 'images/bmw528li_1.jpg'%})">
+
+
+    <div id="login-form" class="rt" >
+        <form action="{%url 'login'%}" method="post">
+            {%csrf_token%}
+
+            <!-- 第一行：手机号 -->
+            <div class="form-line">
+                <p>手机号</p>
+                <div>
+                    <input class="border" type="text" name="phone">
+                    <span id="phone-show">
+                        {{errors}}
+                    </span>
+                </div>
+            </div>
+
+            <!-- 第二行：密码 -->
+            <div class="form-line">
+                <p>密码</p>
+                <div>
+                    <input class="border" type="password" name="upwd" placeholder="请输入6-20位号码字符">
+                </div>
+            </div>
+
+
+            <!-- 第三行：验证码 -->
+            <div class="form-line">
+                <p>验证码</p>
+                <div>
+                    <input class="border" type="text" name="verify" placeholder="请输入4位验证码字符">
+
+                    
+                      <script>
+
+                        yzm=Math.floor(Math.random()*10000);
+                        document.write(yzm)
+                        document.write("<font style='color:#FF0000; font-size:18px'>" + yzm + "</font>");
+                    //这个是1000-10000的数 
+
+                    </script> 
+
+                    <span id="verify-show" >
+                        
+                        {{verify2}}
+                    </span>
+                </div>
+            </div>
+
+            <!-- 第四行：记住密码 -->
+            <div class="form-line">
+                <p></p>
+                <div class="pwd-line">
+                    <input type="checkbox" name="isSave">记住密码
+                    <a href="#">忘记密码</a>
+                    <a href="#">快捷登录</a>
+                </div>
+            </div>
+
+            <!-- 第五行：登录　注册会员 -->
+            <div class="form-line">
+                <p></p>
+                <div class="form-btn">
+                    <input type="submit" value="登录"
+                    >
+                </div> 
+                <div> &nbsp;&nbsp;&nbsp; </div> 
+                <div class="form-btn">
+                    
+                    <input type="button" onclick="javascrtpt:window.location.href='../sign'"  value="注册" >
+                 </div>  
+            </div>
+        </form>
+
+        </div>
+        <!-- 增加一个空块级元素，撑起　login-box -->
+        <div class="clear"></div>
+    </div>
+</div>    
+
+
+<div class="scd">
+    <div class="scd_h">
+        <a href="#" class="now">公司简介</a>
+        <a href="#">联系方式</a>
+    </div>
+    <div class="scd_m">
+        <p>Car-Store有限公司是一家专注于驾考驾培、汽车交易、智能交通和精准汽车业领域的系统解决方案商和核心设备提供商。</p>
+        <p>公司以"科技创新和产业多元化智能应用"为己任，以技术创新和行业发展为基础，产品广泛用于智能交通、精准服务、驾考驾培、精密授时等多个应用领域。Car-Store公司自主研发的易学车驾驶员培训系统、科目二智能驾考系统、科目三智能驾考系统、驾校智能化计时培训系统等产品解决方案已经拥有成功建设案例，覆盖全国13个省（直辖市、自治区） 。</p>
+        <p>Car-Store公司以技术创新作为公司发展的核心竞争力。公司自成立伊始，即高度关注对知识产权的保护，目前已经申请了多项专利。在研发投入方面，更是确保每年科研投入的经费占销售收入的15%以上，并同国内外的专业科研机构建立了紧密的技术合作关系，进一步提高公司的行业竞争力。</p>
+        <p>Car-Store公司以满足客户需求为目标，立志为客户提供创新性、定制化的产品和服务，帮助客户提高盈利能力，并形成可持续的发展空间。</p>
+        <p>未来，Car-Store将以智能化的行业视野，积极迎接挑战，打造享誉全球的领先的智能系统解决方案商和核心设备提供商，力创世界级卓越企业。</p>
+    </div>
+</div>
+<!--主体盒子-->
+<!--页面底部-->
+            <div id="bottommenu">
+                <div class="bottomlogo">
+                    <img src="{%static 'images/bottomlogo.png'%}">
+                </div>
+                <hr>
+                <ul class="bottomlinks">
+                    <li><a href="#/">ABOUT US</a></li>
+                    <li><a href="#/">CATEGORIES</a></li>
+                    <li><a href="#/">PREORDERS</a></li>
+                    <li><a href="#/">CONTACT US</a></li>
+                    <li><a href="#/">RECEIVE OUR NEWSLETTER</a></li>
+                </ul>
+                <p>"Lorem ipsum dolor sit amet, consectetur,  sed do eiusmod tempor incididunt <br>
+                    eiusmod tempor incididunt </p>
+                <br>
+                <div class="footer">
+                    <div class="copyright">
+                      Copyright &copy; 2017.Company name All rights reserved.
+                    </div>
+                    <div class="design">
+                         Designed by <a href="#">https://github.com/xuyaling</a>
+                    </div>
+                </div>
+            </div>
+
+   <!--登录功能-->
+
+
+               
+                   
+
+         
+</body>
+</html>

@@ -1,0 +1,46 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>评价商品</title>
+    <link rel="stylesheet" href="{%static 'css/comment.css'%}">
+    <script src="{%static 'js/gao/jquery-3.2.1.js'%}"></script>
+    <script src="{%static 'js/comment_ajax.js'%}"></script>
+</head>
+<body>
+<!--顶部长条－－图标，电话，搜索框，登录注册链接-->
+    <div id="top">
+        <table width="100%" height="100%">
+            <tr>
+                <td>
+                    <img height="144px" src="{%static 'images/logo1.png'%}">
+                </td>
+                <td id="get_touch">GIVE US A CALL: 027 XXXX XXXX</td>
+                <td id="log_sign_link">
+                        <span id="login_success">欢迎你，{{user.uname}} </span>
+                        <a id="gotoindex" href="/car/index/">&nbsp;&nbsp;&nbsp;&nbsp;首页</a>
+                        <br>
+                        <a href="/car/cart/" id="mycart">我的购物车</a>
+                        <a href="/car/login/?quit=yes" id="quit_a"> &nbsp;&nbsp;&nbsp;&nbsp;注销</a>
+                </td>
+            </tr>           
+        </table>
+    </div>
+
+    <div id="comment">
+        <table>
+            <tr>
+                <td><img src="/{{car.carimage}}" height ="200px"></td>
+                <td><textarea cols="80" rows="10" id="content" placeholder="请留下您的评价哦"></textarea></td>
+            </tr>
+            <tr>
+                <td><p id="carname">{{car.carname}}</p></td>   
+                <td>
+                    <input id="submitcomment" type="submit" value="提交">
+                    <input type="reset" value="重置">
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

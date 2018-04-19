@@ -1,0 +1,149 @@
+#top{
+    height: 150px;
+    background: gray;   
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+#get_touch{
+    color:#fff;
+    font-weight: bold;
+}
+
+#log_sign_link{
+    color:white;
+}
+
+#login_a, #register_a, #login_success, #myorder, #mycart{
+    color: white;
+    text-decoration: none;
+}
+
+#gotoindex{
+    color: white;
+    text-decoration: none;
+}
+
+#quit_a{
+    color: white;
+    text-decoration: none;
+}
+
+#search{
+    width: 500px;    
+}
+
+#search_submit{
+    width: 50px;
+}
+
+#search, #search_submit{
+    height: 40px;
+    border: 1px solid #ccc;
+    padding: 0;
+    outline: 0;
+}
+
+/* 图片轮播　*/
+#bigimage{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+
+#main .maincars{
+    margin-bottom: 30px;
+}
+
+
+#main .maincars .text{
+    height: 50px;
+    font: bold 24px 'microsoft yahei';
+    color:darkgray;
+    text-align: center;
+    line-height: 50px;
+    margin-bottom: 10px;
+}
+
+#main .maincars .text hr{
+    border-top: darkgray;
+}
+
+
+#main .maincars .smallimages .nameprice{
+    color:darkgray;
+    font-size: 20px;
+
+}
+
+#main .maincars .smallimages ul{
+    overflow: hidden;
+}
+
+#main .maincars .smallimages ul>li{
+    width: 320px;
+    float: left;
+    margin: 10px 15px;
+}
+
+
+#main .maincars .smallimages ul>li>p>a img{
+    width: 100%;
+}
+
+
+
+#bottommenu .bottomlogo{
+    text-align: center;
+    margin:30px;
+}
+
+#bottommenu .bottomlinks{
+    overflow: hidden;
+}
+
+#bottommenu .bottomlinks li{
+    float:left;
+    margin:0 65px;
+}
+
+#bottommenu .bottomlinks li>a{
+    text-decoration: none;
+    font-size:20px;
+    color:darkgray;   
+}
+
+#bottommenu p{
+    font-size:14px;
+    text-align: center;
+}
+
+#bottommenu .copyright, .design{
+    text-align: center;
+}

@@ -1,0 +1,165 @@
+body{
+    position: relative;
+}
+
+#top{
+    height: 150px;
+    background: gray;   
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+#get_touch{
+    color:#fff;
+    font-weight: bold;
+}
+
+#log_sign_link{
+    color:white;
+}
+
+#login_a, #register_a, #gotoindex, #login_success, #quit_a, #mycart{
+    color: white;
+    text-decoration: none;
+}
+
+#main{
+    position: relative;
+    height: 610px;
+    margin-bottom: 50px;
+}
+
+#main .left img{
+    position: absolute;
+    left: 50px;
+    width: 500px;
+}
+
+
+#main .right{
+    position: absolute;
+    left: 620px;
+    width: 700px;
+}
+
+#main .right .carname{
+    font-size: 35px;
+}
+
+#main .right .cardesc{
+    margin: 30px 0px 50px ;
+    font-size: 16px;
+    color:gray;
+}
+
+#main .right .table1{
+    width: 600px;
+    height: 400px;
+}
+
+#main .right .table1 .col1{    
+    font-size: 16px;
+    color:gray;
+}
+
+#main .right .table1 .carprice{    
+    font-size: 35px;
+    color:orange;
+}
+
+#main .right .table1 .col2 .ad{    
+    font-size: 14px;
+    text-decoration: none;
+    color:darkgray;
+}
+
+#carcount{
+    width: 80px;
+}
+
+
+#addToCart{
+    outline: none;
+    background-color: darkorange;
+    width: 120px;
+    height: 40px;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: bold;
+    color:white;
+    margin-right: 15px;
+}
+
+#buynow{
+    background-color: darkorange;
+    width: 120px;
+    height: 40px;
+    border-radius: 3px;
+    font-size: 20px;
+    font-weight: bold;
+    color:white;
+}
+
+#canshu{
+    position: absolute;
+    left:50px;
+    margin-top: 20px;
+    height: 300px;
+}
+
+#canshu img{
+    width: 100%;
+}
+
+#comment{
+    position: absolute;
+    top: 1300px;
+    width: 92%
+}
+
+#comment .commenttable table{
+    width: 100%
+}
+
+#comment .commenttable table tr>td{
+    font-size: 20px;
+    color:darkgray;
+}
+
+
+
+#bottommenu{
+    position: absolute;
+    top: 2000px;
+}
+#bottommenu .bottomlogo{
+    text-align: center;
+    margin:30px;
+}
+
+#bottommenu .bottomlinks{
+    overflow: hidden;
+}
+
+#bottommenu .bottomlinks li{
+    float:left;
+    margin:0 65px;
+}
+
+#bottommenu .bottomlinks li>a{
+    text-decoration: none;
+    font-size:20px;
+    color:darkgray;   
+}
+
+#bottommenu p{
+    font-size:14px;
+    text-align: center;
+}
+
+#bottommenu .copyright, .design{
+    text-align: center;
+}

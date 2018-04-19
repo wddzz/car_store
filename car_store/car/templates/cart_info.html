@@ -1,0 +1,77 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{%static 'css/common.css'%}">
+    <link rel="stylesheet" href="{%static 'css/cart.css'%}">
+
+    <script src="{%static 'js/wang/jquery-1.11.3.js'%}"></script>
+    <script src="{%static 'js/wang/cart.js'%}"></script>
+
+    <title>{{user.uname}}的购物车</title>
+</head>
+<body>
+    <div>
+        <!--顶部长条－－图标，电话，搜索框，登录注册链接-->
+        <div id="top">
+            <table width="100%" height="100%">
+                <tr>
+                    <td>
+                        <img height="144px" src="{%static 'images/logo1.png'%}">
+                    </td>
+                    <td id="get_touch">GIVE US A CALL: 027 8888 8888</td>
+                    <td id="log_sign_link">
+                        {%if user.uname%}
+                            <span id="login_success">欢迎你，{{user.uname}} </span>
+                            <a id="gotoindex" href="/car/index/">&nbsp;&nbsp;&nbsp;&nbsp;首页</a>
+                            <br>
+                            <a href="/car/cart/" id="mycart">我的购物车</a>
+                            <a href="/car/login/?quit=yes" id="quit_a"> &nbsp;&nbsp;&nbsp;&nbsp;注销</a>
+                        {%else%}
+                            <a id="login_a" href="/car/login/">LOGIN</a>
+                            |
+                            <a id="register_a" href="/car/sign/">REGISTER</a>
+                        {%endif%}
+                    </td>
+                </tr>
+                
+            </table>
+        </div>
+        
+        <div id="container">
+            <div id="head">
+                <span class="span1">宝贝</span>
+                <span class="span2">单价</span>
+                <span class="span3">数量</span>
+                <span class="span4">总价</span>
+            </div>
+            {%for cart in carts %}
+
+            <div class='cartbox'>
+                <img src="/{{cart.carimage}}">
+                <p class="carname" id="carname">{{cart.carname}}</p>
+                <div>
+                    <p>{{cart.carcolor}}</p>
+                    <p>{{cart.cartype}}</p>
+                </div>
+
+                <p id="pprice">{{cart.carprice}}</p>
+
+                <div id='change'>
+                    <button class='sub'>-</button>
+                    <input class='input' type='text' id="carcount" name='amount' value="{{cart.carcount}}">
+                    <button class='add'>+</button>
+                </div>
+
+                <p class='tprice'></p>
+                <p><span id="deletecart">删除</span></p>
+            </div>
+            {%endfor%}
+        </div>
+        <p class="clear" id="xxx">
+            <span id='play'></span>
+            <span id='doplay'>结算</span>
+        </p> 
+    </div>
+</body>
+</html>

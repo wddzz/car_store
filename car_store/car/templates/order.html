@@ -1,0 +1,113 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{user.uname}}的已完成订单</title>
+    <link rel="stylesheet" href="{%static 'css/gao/common.css'%}">
+    <link rel="stylesheet" href="{%static 'css/gao/order.css'%}">
+    <script src="{%static 'js/gao/jquery-3.2.1.js'%}"></script>
+    <script src="{%static 'js/gao/checkall.js'%}"></script>
+    <script src="{%static 'js/order_comment_ajax.js'%}"></script>
+</head>
+<body>
+    <!--顶部长条－－图标，电话，搜索框，登录注册链接-->
+    <div id="top">
+        <table width="100%" height="100%">
+            <tr>
+                <td>
+                    <img height="144px" src="{%static 'images/logo1.png'%}">
+                </td>
+                <td id="get_touch">GIVE US A CALL: 027 XXXX XXXX</td>
+                <td id="log_sign_link">
+                    {%if user.uname%}
+                        <span id="login_success">欢迎你，{{user.uname}} </span>
+                        <a id="gotoindex" href="/car/index/">&nbsp;&nbsp;&nbsp;&nbsp;首页</a>
+                        <br>
+                        <a href="/car/cart/" id="mycart">我的购物车</a>
+                        <a href="/car/login/?quit=yes" id="quit_a"> &nbsp;&nbsp;&nbsp;&nbsp;注销</a>
+                    {%else%}
+                        <a id="login_a" href="/car/login/">LOGIN</a>
+                        |
+                        <a id="register_a" href="/car/sign/">REGISTER</a>
+                    {%endif%}
+                </td>
+            </tr>
+            
+        </table>
+    </div>
+    
+    <div id='container'>
+        <!-- 订单头 -->
+        <div id='order_head'>
+            <div id="treasure" class="lf head">宝贝</div>
+            <div id="price" class="lf head">单价</div>
+            <div id="order_count" class="lf head">数量</div>
+            <div id="handle" class="lf head">商品操作</div>
+            <div id="payed_money" class="lf head">实付款</div>
+            <div id="deal_status" class="lf head">
+                交易状态
+                <div id="corner"></div>
+            </div>
+        </div>
+
+        <!-- 全选，收货确认 -->
+        <div id="checkall1">
+                <input id="checkall2" type="checkbox" name="checkall">全选
+        </div>
+
+        <!-- 每个订单的循环 -->
+        {%for order in orders%}
+        <!-- 日期 订单号-->
+        <div class="date">
+            <span class="lf order_number">
+                <input type="checkbox" name="date">{{order.createdat}}
+                订单号：<span id="order_id">{{order.id}}</span>
+            </span>
+            <span class="lf store">
+                <a href="#">徐老板车行</a>
+            </span>
+            <span class="lf touch_me">
+                <a href="#">联系电话:15588888888</a>
+            </span>
+        </div>
+
+        
+        <!-- 商品具体内容 -->
+        <div class="goods_message">
+            <div class="lf goods_description">
+                <span class="lf">
+                    <a href="#">
+                        <img src="/{{order.carimage}}">
+                    </a>
+                </span>
+                <span id="carname" class="lf">{{order.carname}}</span>
+            </div>
+            
+            <div class="lf goods_price">
+                {{order.carprice}}
+            </div>
+            <div class="lf goods_count">
+                {{order.carcount}}
+            </div>
+            <div class="lf goods_handle">
+                <span id="givecomment">评价商品</span><br>
+                <span id="delete_order">删除</span> <br>
+                <a href="#">退款/退换货</a>
+            </div>
+            <div class="lf payed_money">
+                ￥{{order.carprice}}<br>
+            </div>
+            <div class="lf deal_status">
+                物流派件中 <br>
+                <a href="#">订单详情</a><br>
+                <a href="#">查看物流</a><br>
+            </div>
+        </div>
+        <br>
+        {%endfor%}
+    </div>
+    <br>
+    <br>
+</body>
+</html>

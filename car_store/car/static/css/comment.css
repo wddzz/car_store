@@ -1,0 +1,29 @@
+body{
+    position: relative;
+}
+
+#top{
+    height: 150px;
+    background: gray;   
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+#get_touch{
+    color:#fff;
+    font-weight: bold;
+}
+
+#log_sign_link{
+    color:white;
+}
+
+#login_a, #register_a, #gotoindex, #login_success, #quit_a, #mycart{
+    color: white;
+    text-decoration: none;
+}
+
+#comment{
+    width: 800px;
+    margin-left: 200px;
+}

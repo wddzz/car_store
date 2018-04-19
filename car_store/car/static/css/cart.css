@@ -1,0 +1,116 @@
+
+
+#top{
+    height: 150px;
+    background: gray;   
+    font-size: 18px;
+    margin-bottom: 30px;
+    width: 1300px;
+    margin-left: 100px;
+}
+
+#get_touch{
+    color:#fff;
+    font-weight: bold;
+}
+
+#log_sign_link{
+    color:white;
+}
+
+#login_a, #register_a, #gotoindex, #login_success, #quit_a, #mycart{
+    color: white;
+    text-decoration: none;
+}
+
+#container{
+    width: 1300px;
+    margin-left: 100px;
+}
+
+#head span{
+    font-size: 18px;
+}
+
+#head .span1{
+    margin-right: 450px;
+}
+
+#head .span2,.span3,.span4{
+    margin-right: 140px;
+}
+
+
+#container>h1.top{
+    /*取消加粗，文本颜色，下边框，下内边距，上外边距，下外边距*/
+    font-weight:normal;
+    color:#999;
+    padding-bottom:20px;
+    margin:35px 0 0 0;
+}
+.cartbox{
+    border:1px dotted #000;
+    overflow:hidden;
+    padding:15px 0;
+    background-color: #fcfcfc;
+}
+.cartbox>img,.cartbox>p,.cartbox>div{
+    float:left;
+    width:100px;
+    height:80px;
+    margin-right:61px; 
+}
+#change{
+    position:relative;
+}
+
+.input{
+    width:40px;
+    height:29px;
+    border:1px solid #ccc;
+    padding:0;
+    /*左内边距*/
+    padding-left:5px;
+    /*取消轮廓*/
+    outline:0;
+    position: absolute;
+    left:30px;
+}
+#pprice{
+    font-weight: bold;
+}
+.tprice{
+    font-weight: bold;
+    color: #f00;
+}
+
+#play{
+    margin-top:20px;
+    text-align: right;
+    font-size: 30px;
+}
+#xxx{
+    margin-top:20px;
+    text-align: right;
+    font-size: 30px;
+}
+
+#doplay:hover{
+    color:red;
+}
+
+.sub{
+    width: 10px;
+    position: absolute;
+    text-align: center;
+}
+.add{
+    width:15px;
+    position: absolute;
+    left:77px;
+    text-align: center;
+}
+
+#deletecart:hover{
+    color:red;
+}
