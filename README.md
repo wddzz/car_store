@@ -3,4 +3,4 @@
 环境：Linux；
 工具：Python 3.5.2   Django 1.11.8;
 
-! [首页] (https://github.com/wddzz/car_store/images/){98AIUDLXZ5UOZ[51T)))Y.png)
+![image](https://github.com/wddzz/car_store/images/){98AIUDLXZ5UOZ[51T)))Y.png)
