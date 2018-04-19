@@ -7,5 +7,5 @@
 ![注册](https://github.com/wddzz/car_store/raw/master/zhuce.png)
 ![主页](https://github.com/wddzz/car_store/raw/master/zhuye.jpg)
 ![详情页](https://github.com/wddzz/car_store/raw/master/xiangqingye.jpg)
-![购物车](https://github.com/wddzz/car_store/raw/master/gouwuchen.png)
+![购物车](https://github.com/wddzz/car_store/raw/master/gouwuche.png)
 ![订单页](https://github.com/wddzz/car_store/raw/master/dingdan.png)
