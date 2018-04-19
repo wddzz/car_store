@@ -3,9 +3,9 @@
 环境：Linux；
 工具：Python 3.5.2   Django 1.11.8;
 部分截图如下：
-![首页](https://github.com/wddzz/car_store/raw/master/shouye.png)
+![首页](https://github.com/wddzz/car_store/blob/raw/master/shouye.jpg)
 ![注册](https://github.com/wddzz/car_store/raw/master/zhuce.png)
-![主页](https://github.com/wddzz/car_store/raw/master/zhuye.png)
-![详情页](https://github.com/wddzz/car_store/raw/master/xiangqingye.png)
+![主页](https://github.com/wddzz/car_store/raw/master/zhuye.jpg)
+![详情页](https://github.com/wddzz/car_store/raw/master/xiangqingye.jpg)
 ![购物车](https://github.com/wddzz/car_store/raw/master/gouwuchen.png)
 ![订单页](https://github.com/wddzz/car_store/raw/master/dingdan.png)
